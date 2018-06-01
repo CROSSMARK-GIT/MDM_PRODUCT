@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>MDM_Product_All_Reference_Test</members>
+        <members>MDM_Product_AutoUpdateStatusByDateBt</members>
+        <members>MDM_Product_Brand_PopulateIDBt</members>
+        <members>MDM_Product_BulkUploadProductExt</members>
+        <members>MDM_Product_BulkUploadProductExtbt</members>
+        <members>MDM_Product_BulkUploadStatusExt</members>
+        <members>MDM_Product_Country_PopulateIDBt</members>
+        <members>MDM_Product_Helper</members>
+        <members>MDM_Product_Manufacturer_BeforeUpsert</members>
+        <members>MDM_Product_Manufacturer_PopulateIDBt</members>
+        <members>MDM_Product_Mfg_PrdCategory_PopulateIDBt</members>
+        <members>MDM_Product_ProductCategory_PopulateIDBt</members>
+        <members>MDM_Product_ProductGroup_PopulateIDBt</members>
+        <members>MDM_Product_Reference_UpdatedBt</members>
+        <members>MDM_Product_ValidateProductbt</members>
+        <members>mdmProduct_LightingController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>MDM_Location_BulkUploadProductExtbt</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>MDM_Product_UploadStatus</members>
+        <members>MDM_UploadProducts</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>MDM_Product_AfterUpsertProduct</members>
+        <members>MDM_Product_BeforeUpsertProduct</members>
+        <members>MDM_Product_Brand_AfterUpsert</members>
+        <members>MDM_Product_Brand_BeforeUpsert</members>
+        <members>MDM_Product_Country_AfterUpsert</members>
+        <members>MDM_Product_Manufacturer_AfterUpsert</members>
+        <members>MDM_Product_Manufacturer_BeforeUpsert</members>
+        <members>MDM_Product_Mfg_PrdCategory_AfterUpsert</members>
+        <members>MDM_Product_Mfg_PrdCategory_BeforeUpsert</members>
+        <members>MDM_Product_ProductCategory_AfterUpsert</members>
+        <members>MDM_Product_ProductCategory_BeforeUpsert</members>
+        <members>MDM_Product_ProductGroup_AfterUpsert</members>
+        <members>MDM_Product_ProductGroup_BeforeUpsert</members>
+        <members>MDM_Product_Stage_BeforeUpsertProduct</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>MDM_Product</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>MDM_Brand__c</members>
+        <members>MDM_Bulkupload__c</members>
+        <members>MDM_Configuration__c</members>
+        <members>MDM_Country__c</members>
+        <members>MDM_EnterpriseNumberSeeder__c</members>
+        <members>MDM_ManufacturerProductCategory__c</members>
+        <members>MDM_Manufacturer__c</members>
+        <members>MDM_PEID_X_SourceID__c</members>
+        <members>MDM_PRODUCT_X_SourceID__c</members>
+        <members>MDM_ProductCategory__c</members>
+        <members>MDM_Product_Country__c</members>
+        <members>MDM_Product_Group__c</members>
+        <members>MDM_Product_Stage__c</members>
+        <members>MDM_Product__c</members>
+        <members>MDM_Source__c</members>
+        <members>Product_Status__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>MDM_Brand__c</members>
+        <members>MDM_Bulkupload__c</members>
+        <members>MDM_Configuration__c</members>
+        <members>MDM_Country__c</members>
+        <members>MDM_ManufacturerProductCategory__c</members>
+        <members>MDM_Manufacturer__c</members>
+        <members>MDM_PEID_X_SourceID__c</members>
+        <members>MDM_ProductCategory__c</members>
+        <members>MDM_Product_BulkUpload</members>
+        <members>MDM_Product_Country__c</members>
+        <members>MDM_Product_Group__c</members>
+        <members>MDM_Product_Search</members>
+        <members>MDM_Product_Stage__c</members>
+        <members>MDM_Product_UploadStatus</members>
+        <members>MDM_Product__c</members>
+        <members>MDM_Source__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>MDM_Brand__c-Brand Layout</members>
+        <members>MDM_Bulkupload__c-MDM_Location_BulkloadLocation Layout</members>
+        <members>MDM_Configuration__c-MDM_Configuration Layout</members>
+        <members>MDM_Country__c-MDM_Country Layout</members>
+        <members>MDM_ManufacturerProductCategory__c-ManufacturerProductCategory Layout</members>
+        <members>MDM_Manufacturer__c-Manufacturer Layout</members>
+        <members>MDM_PEID_X_SourceID__c-MDM_PEID_X_SourceID Layout</members>
+        <members>MDM_PRODUCT_X_SourceID__c-MDM_PRODUCT_X_SourceIDs Layout</members>
+        <members>MDM_ProductCategory__c-Category Layout</members>
+        <members>MDM_Product_Country__c-MDM_Product_Country Layout</members>
+        <members>MDM_Product_Group__c-Product Group Layout</members>
+        <members>MDM_Product_Stage__c-MDM_Product_Stage_AllField_Layout</members>
+        <members>MDM_Product__c-Product Layout</members>
+        <members>MDM_Source__c-MDM_Source Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>35.0</version>
+</Package>

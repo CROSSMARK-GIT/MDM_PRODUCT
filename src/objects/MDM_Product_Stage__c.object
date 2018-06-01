@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a generic template for Custom Object.  With this template, you may adjust the default elements and values and add new elements and values.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MDM_Brand__c.Manufacturer__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Manufacturer__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>MDM_Brand__c.EnterpriseID__c</field>
+                <operation>startsWith</operation>
+                <value>BD-</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MDM_Brand__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BulkUploadID__c</fullName>
+        <externalId>false</externalId>
+        <label>BulkUploadID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Pack__c</fullName>
+        <description>Case Pack</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Case Pack</inlineHelpText>
+        <label>Case Pack</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_UPC__c</fullName>
+        <externalId>false</externalId>
+        <label>Case UPC</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CategoryFamilyName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Category__r.CategoryFamilyName__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CategoryFamilyName</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MDM_ProductCategory__c.EnterpriseID__c</field>
+                <operation>startsWith</operation>
+                <value>PC-</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MDM_ProductCategory__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ConfirmationSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>ConfirmationSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cost_of_Goods_Sold__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost of Goods Sold</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomizedLastModifiedDatetime__c</fullName>
+        <defaultValue>$System.OriginDateTime</defaultValue>
+        <description>CustomizedLastModifiedDatetime</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CustomizedLastModifiedDatetime</inlineHelpText>
+        <label>CustomizedLastModifiedDatetime</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CustomizedLastModifiedUserName__c</fullName>
+        <description>CustomizedLastModifiedUserName</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Who Last updated the Product / Added or updated a Reference to this product.</inlineHelpText>
+        <label>CustomizedLastModifiedUserName</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomizedOriginalCreatedUser__c</fullName>
+        <externalId>false</externalId>
+        <label>CustomizedOriginalCreatedUser</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Override_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Data Override Flag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Default_Unit_Delivered_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Unit Delivered Cost</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Default_Unit_Price__c</fullName>
+        <description>Default Unit Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Unit Price</inlineHelpText>
+        <label>Default Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Product Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product Description</inlineHelpText>
+        <label>Description</label>
+        <length>150</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dimension_Unit_of_Measure__c</fullName>
+        <externalId>false</externalId>
+        <label>Dimension Unit of Measure</label>
+        <picklist>
+            <picklistValues>
+                <fullName>inches</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>mm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DomainSpecificIDType__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Identifier Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ISBN-International Standard Book Number</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASIN-Amazon Standard Identification Number</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ISSN-International Standard Serial Number (Magazine subscriptions)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NDC-National Drug Code (US)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ISMN- International Standard Music Number</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DomainSpecificID__c</fullName>
+        <description>Other Identifier</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Other Identifier</inlineHelpText>
+        <label>Other Identifier</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EAN13__c</fullName>
+        <description>GTIN-13 numbers (in EAN-13 barcodes)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTIN-13 numbers (in EAN-13 barcodes)</inlineHelpText>
+        <label>EAN-13</label>
+        <length>13</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EAN14__c</fullName>
+        <description>EAN14</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTIN-14 (EAN/UCC-14 or ITF-14): this is a 14-digit number used to identify trade items at various packaging levels</inlineHelpText>
+        <label>EAN-14</label>
+        <length>14</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EAN8__c</fullName>
+        <description>GTIN-8 numbers (EAN-8 barcodes)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An eight-digit UPC. The UPC-E could be stored here
+GTIN-8 numbers</inlineHelpText>
+        <label>EAN-8</label>
+        <length>8</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Availability_Date__c</fullName>
+        <description>End Availability Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End Availability Date</inlineHelpText>
+        <label>End Availability Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EnterpriseID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>EnterpriseID</description>
+        <externalId>true</externalId>
+        <label>EnterpriseID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>EstablishSourceLinkOnly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>EstablishSourceLinkOnly</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GTIN__c</fullName>
+        <description>Global Trade Item Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The GTIN (Global Trade Item Number) is the foundation for the EAN.</inlineHelpText>
+        <label>GTIN Number</label>
+        <length>16</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IdFromSource__c</fullName>
+        <externalId>true</externalId>
+        <label>IdFromSource</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IgnoreWarnings__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>IgnoreWarnings</description>
+        <externalId>false</externalId>
+        <inlineHelpText>At least one of the Domain/Usage should be checked
+If the Planning Product check box is selected, Enter a Cost of Good sold value.
+We should warn if the same Manufacturer Product identifier is used</inlineHelpText>
+        <label>IgnoreWarnings</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>InnerPack__c</fullName>
+        <externalId>false</externalId>
+        <label>Inner Pack</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Consumer_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Consumer Product</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Invoicable_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Invoicable Product</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Orderable_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Orderable Product</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Planning_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Planning Product</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Shipping_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Shipping Product</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ManufacturerCategory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>ManufacturerProductCategory</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ManufacturerProductCategory</inlineHelpText>
+        <label>ManufacturerCategory</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MDM_ManufacturerProductCategory__c.Manufacturer__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Manufacturer__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MDM_ManufacturerProductCategory__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ManufacturerDescription__c</fullName>
+        <externalId>false</externalId>
+        <label>ManufacturerDescription</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ManufacturerID__c</fullName>
+        <description>International Standard Book Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>International Standard Book Number</inlineHelpText>
+        <label>Manufacturer Identifier</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Manufacturer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MDM_Manufacturer__c.EnterpriseID__c</field>
+                <operation>startsWith</operation>
+                <value>MG-</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MDM_Manufacturer__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Package_Depth__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Depth</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Package_Height__c</fullName>
+        <description>Package Height</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Package Height</inlineHelpText>
+        <label>Package Height</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Package_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Unit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EA-Each</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PK-Pack</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CS-Case</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS-Display Shipper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL-Pallet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MX-Mixed Module</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TL-Transport Load</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Package_Weight__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Weight</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Package_Width__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Width</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Country__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Country</label>
+        <referenceTo>MDM_Product_Country__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MDM_Product_Group__c.Manufacturer__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Manufacturer__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>MDM_Product_Group__c.EnterpriseID__c</field>
+                <operation>startsWith</operation>
+                <value>PG-</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MDM_Product_Group__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Future</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discontinued</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deleted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Short_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Short Description</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Size_Unit_of_Measure__c</fullName>
+        <externalId>false</externalId>
+        <label>Size Unit of Measure</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PK-Pack (PK)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PT-Pints (pt)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EA-Each (EA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>QT-Quarts (qt)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF-Square Feet (SF)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RL-Rolls (RL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA-Not Applicable (NA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LB-Pounds (lbs)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>YD-Yards (yd)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CT-Count (CT)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OZ-Ounces (oz)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML-Mililiters (mL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GA-Gallons (ga)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MG-Milligrams (mg)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FT-Feet (ft)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BG-Bags (BG)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BX-Boxes (BX)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IN-Inches (in)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KT-Kit (KT)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DP-Display Unit (DP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>JR-Jars (JR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>g-Grams (g)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kg-Kilograms (Kg)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>L-Liters (L)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SH-Sheets (SH)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PC-Pieces (PC)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ST-Sticks (ST)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PD-Pads (PD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM-Centimeters (CM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MM-Millimeters (MM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RW-Random Weight (RW)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AS-Assortment (AS)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CN-Carton (CN)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HD-Head (HD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PR-Pair (PR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DZ-Dozen (DZ)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FL-Fluid Ounces (FL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GM-Gigameter (GM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Size__c</fullName>
+        <description>Size</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Size</inlineHelpText>
+        <label>Size</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceSystem__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SourceSystem</label>
+        <referenceTo>MDM_Source__c</referenceTo>
+        <relationshipLabel>MDM_Product_Stages</relationshipLabel>
+        <relationshipName>MDM_Product_Stages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Availability_Date__c</fullName>
+        <description>Start Availability Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start Availability Date</inlineHelpText>
+        <label>Start Availability Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TransferredToMDM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TransferredToMDM</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>UPC12__c</fullName>
+        <description>Universal Product Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Universal Product Code
+This is the 12 digit UPC-A. Note, one of the five identifying numbers must be specified</inlineHelpText>
+        <label>UPC-12</label>
+        <length>12</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Validation_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Validation Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Variant__c</fullName>
+        <externalId>false</externalId>
+        <label>Variant</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weight_Unit_of_Measure__c</fullName>
+        <externalId>false</externalId>
+        <label>Weight Unit of Measure</label>
+        <picklist>
+            <picklistValues>
+                <fullName>lbs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>kilograms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>MDM_Product_Stage</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>IdFromSource__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Dynamic</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>IdFromSource__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>equals</operation>
+            <value>Product 011</value>
+        </filters>
+        <label>Dynamic</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>ProductName</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>MDM_Product_Stages</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ConsumerProduct_EnterCaseUPC_CassPack</fullName>
+        <active>true</active>
+        <description>If Consumer Product is selected and any of the remaining, the user should probably provide a case UPC and a</description>
+        <errorConditionFormula>OR
+(AND(Is_Consumer_Product__c == true,
+ISNULL(Case_Pack__c),IgnoreWarnings__c == false),
+AND(Is_Consumer_Product__c == true, ISBLANK(Case_UPC__c),   IgnoreWarnings__c== false ))</errorConditionFormula>
+        <errorMessage>Warning: Consumer Product is selected Provide a case UPC and a CasePack.
+To Ignore the warning and proceed, Accept Ignore Warnings.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HeightWidthDepth_DimensionUnitofMeasure</fullName>
+        <active>true</active>
+        <errorConditionFormula>And(
+OR( Package_Depth__c &lt;&gt; 0, Package_Height__c &lt;&gt; 0, Package_Width__c &lt;&gt; 0),  
+( ISPICKVAL(Dimension_Unit_of_Measure__c,&quot;&quot;)))</errorConditionFormula>
+        <errorMessage>If a height, width, or depth dimension are entered, there must be a dimension unit of measure selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IdentifiersValidation</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+AND(NOT(ISBLANK(EAN8__c)),
+    LEN(EAN8__c) &lt; 8),
+AND(NOT(ISBLANK(UPC12__c)),
+    LEN(UPC12__c) &lt; 12),
+And (NOT(ISBLANK(EAN13__c)),
+    LEN(EAN13__c) &lt; 13),
+AND (NOT(ISBLANK(EAN14__c)),
+    LEN(EAN14__c) &lt; 14)
+)</errorConditionFormula>
+        <errorMessage>Invalid Identifier</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OneoftheDomainUsagecheckboxesChecked</fullName>
+        <active>true</active>
+        <description>At least one of the Domain/Usage check boxes should be checked</description>
+        <errorConditionFormula>AND(
+AND( Is_Consumer_Product__c == false, Is_Planning_Product__c == false, Is_Orderable_Product__c == false, Is_Shipping_Product__c == false, Is_Invoicable_Product__c == false),
+(IgnoreWarnings__c = false))</errorConditionFormula>
+        <errorMessage>Warning: At least one of the Domain/Usage checkboxes should be checked.
+To Ignore the warning and proceed, Accept Ignore Warnings.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PlanningProductSelected_EnterCostofGood</fullName>
+        <active>true</active>
+        <description>At least one of the Domain/Usage check boxes should be checked</description>
+        <errorConditionFormula>OR(
+AND(Is_Planning_Product__c == true,
+Cost_of_Goods_Sold__c == 0.0,IgnoreWarnings__c == false),
+AND(Is_Planning_Product__c == true,
+ISNULL(Cost_of_Goods_Sold__c),IgnoreWarnings__c == false)
+)</errorConditionFormula>
+        <errorMessage>Warning: Planning Product check box is selected, Enter a Cost of Good sold value.
+To Ignore the warning and proceed, Accept Ignore Warnings.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rule1</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(OR(REGEX(EAN13__c , &quot;^[0-9]{10}&quot;)))</errorConditionFormula>
+        <errorDisplayField>EAN13__c</errorDisplayField>
+        <errorMessage>Invalid UPC</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Weight_WeightUnitofMeasure</fullName>
+        <active>true</active>
+        <errorConditionFormula>And(
+OR( Package_Weight__c &lt;&gt; 0 ),  
+( ISPICKVAL(Weight_Unit_of_Measure__c ,&quot;&quot;)))</errorConditionFormula>
+        <errorMessage>If a weight value is entered, a weight unit of measure must be selected</errorMessage>
+    </validationRules>
+</CustomObject>

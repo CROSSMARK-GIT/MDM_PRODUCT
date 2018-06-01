@@ -1,0 +1,95 @@
+<apex:page standardController="MDM_Bulkupload__c"
+           extensions="MDM_Product_BulkUploadProductExt,MDM_Product_BulkUploadProductExtbt" docType="html-5.0"
+           tabStyle="MDM_Location_UploadLocations__tab">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <h1>Master Data Management: Product</h1>
+    <apex:form >
+        <apex:pagemessages escape="false" />
+        <apex:actionStatus id="loadingStatus">
+            <apex:facet name="start">
+                <img class="loading-gif" src="/img/loading24.gif" width="24"
+                     height="24" />
+            </apex:facet>
+        </apex:actionStatus>
+        
+        <apex:pageBlock >
+            <apex:pageBlockSection Title="Welcome to Product Upload" columns="2"
+                                   collapsible="false">
+                <span id="Single_Label" style="color: #DD8328;">
+                    Please select a Source, Name your upload and Pick your CSV file to upload Products.
+                </span>[Max 5000 Products in a file]
+        <apex:pageBlockSectionItem helpText="[Download and Use Template:  Click on the DOWNLOAD link for the Template and save it to your hard drive.  Open file and insert data.  Save file as Pipe Delimited so that you can upload the file to the system.  A normal .csv file will not work.]" > 
+            Template:  <apex:outputLink value="/servlet/servlet.FileDownload?file={!docid}">Download</apex:outputLink>       
+        </apex:pageBlockSectionItem>
+        
+    
+ 
+<table>
+    <tr>
+        <td>Product Source:</td>
+        <td><apex:selectList value="{!LocationSourceValue}" size="1">
+            <apex:selectOptions value="{! LocationSource}" />
+            </apex:selectList></td>
+    </tr>
+    <tr>
+        <td>Name your Upload</td>
+        <td><apex:input value="{!locationListName}" html-maxLength="20" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan='1'><apex:inputFile value="{!csvFileBody}"
+                                        title="Browse document" filename="{!csvFilenameString}" /></td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <td><apex:commandButton id="importColl"
+                                value="Import Products" action="{!importCSVFile}" /></td>
+    </tr>
+</table>
+
+
+
+</apex:pageBlockSection>
+<apex:pageBlock >
+    
+    
+</apex:pageBlock>
+<div id="DivSuccess">
+    <apex:pageBlockSection title="Debug Values" columns="1"
+                           rendered="{!IsDebug}" collapsible="false">
+        <table>
+            <tr>
+                <td>  Number of rows</td>
+                <td>  <apex:inputText value="{!NumberofSelectedUPloadrows}" html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td>  debug text </td>
+                <td>  <apex:inputText value="{!Debugtext}" html-readonly="true"/></td>
+            </tr>
+        </table>
+        
+    </apex:pageBlockSection>
+    
+</div>
+
+
+
+<div id="DivFailed">
+    
+</div>
+
+
+
+
+
+</apex:pageBlock>
+
+
+
+
+</apex:form>
+
+
+</apex:page>
